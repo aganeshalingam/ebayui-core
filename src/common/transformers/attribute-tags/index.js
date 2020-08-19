@@ -7,14 +7,15 @@
  * @param {Object} context
  */
 function transform(el, context) {
-    const replacement = context.createNodeForEl(
-        el.tagName.replace(/^(ebay-.*)\-(?=[^-]*$)/, '$1:'),
-        el.getAttributes()
-    );
-    replacement.body = replacement.makeContainer(el.body.items);
-    replacement.argument = el.argument;
-    replacement.params = el.params;
-    el.replaceWith(replacement);
+    return;
+    // const replacement = context.createNodeForEl(
+    //     el.tagName.replace(/^(ebay-.*)\-(?=[^-]*$)/, '$1:'),
+    //     el.getAttributes()
+    // );
+    // replacement.body = replacement.makeContainer(el.body.items);
+    // replacement.argument = el.argument;
+    // replacement.params = el.params;
+    // el.replaceWith(replacement);
 }
 
 module.exports = transform;
